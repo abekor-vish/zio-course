@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "scala",
+      "request": "launch",
+      "name": "Variance",
+      "mainClass": "com.rockthejvm.part1recap.Variance",
+      "buildTarget": "file:/Users/abekor/Documents/GitHub/zio-course/?id=zio-course",
+      "args": [],
+      "jvmOptions": [],
+      "env": {}
+    }
+  ]
+}
