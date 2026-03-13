@@ -55,6 +55,8 @@ object Essentials {
     c <- List('a', 'b', 'c')
   } yield (n, c) // equivalent expression
 
+  // println(anotherCheckerboard)
+
   // options and try
   val anOption: Option[Int] = Option(/* something that might be null */ 3) // Some(3)
   val doubledOption: Option[Int] = anOption.map(_ * 2)
@@ -74,6 +76,7 @@ object Essentials {
     case Some(value) => s"the option is not empty: $value"
     case None => "the option is empty"
   }
+  println(optionDescription)
 
   // Futures
   implicit val ec: ExecutionContext = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(8))
