@@ -26,38 +26,4 @@ object WebSocketZio extends ZIOAppDefault {
         backend.send(basicRequest.get(uri"wss://ws.postman-echo.com/raw").response(asWebSocketAlways(useWebSocket)))
   
     override def run: ZIO[ZIOAppArgs & Scope, Any, Any] = HttpClientZioBackend.scoped().flatMap(sendAndPrint)
-    // override def run: ZIO[ZIOAppArgs & Scope, Any, Any] = for {
-    //     backend  <- HttpClientZioBackend.scoped()
-    //     response <- sendAndPrint(backend)
-    // } yield response
-
-
-    // val result = ZIO.succeed(42).flatMap(n => ZIO.succeed(n * 2))
-    // // for {
-    // //     _ <- ZIO.succeed(n * 2)
-    // // } yield ()
-    // val result2 = ZIO.succeed("Alice").flatMap(name =>
-    //                 Console.printLine(s"Hello $name!").flatMap(_ =>
-    //                     ZIO.succeed(name.length)
-    //                     )
-    //                 )
-    
-    // val result3 = ZIO.succeed(10).flatMap(a =>
-    //                 ZIO.succeed(20).flatMap(b =>
-    //                     Console.printLine(s"Sum is ${a + b}").map(_ => a + b)
-    //                     )
-    //                 )
-
-    
-    // def fetchUser(id: Int): Task[String] = ZIO.succeed(s"User$id")
-    // def fetchScore(user: String): Task[Int] = ZIO.succeed(user.length)
-
-    //     val result4 = fetchUser(1).flatMap(user =>
-    //         fetchScore(user).flatMap(score =>
-    //             Console.printLine(s"$user scored $score").map(_ => score)
-    //         )
-    // )
-
-
-
 }

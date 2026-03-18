@@ -169,3 +169,5 @@ project/metals.sbt
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/scala,java,sbt,intellij
+.scala-build/
+.vscode/
